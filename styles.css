@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 14;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.title-bar {
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.menu-bar {
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+}
+
+.menu-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item.selected {
+    background-color: #fff;
+    color: #107c41;
+}
+
+.menu-item:hover {
+    background-color: #066832;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover {
+    background-color: #fff;
+    cursor: default;
+}
+
+.menu-icon-bar {
+    height: 6vh;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.icon-color-fill, .icon-color-text{
+    position: relative;
+}
+.color-picker{
+    border: none;
+    position: absolute;
+    width: 31px;
+    height: 14px;
+    top: 26px;
+    left: 6px;
+    cursor: pointer;
+}
+
+.menu-icon:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.menu-icon.selected
+{
+    background-color: lightgray;
+}
+
+.font-family-selector {
+    width: 150px;
+    font-family: "Noto Sans";
+}
+
+.selector {
+    font-size: 18px;
+    height: 30px;
+}
+
+.selector option {
+    font-size: 18px;
+}
+
+.formula-bar {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    background-color: rgb(241, 241, 241);
+}
+.formula-editor{
+    height: 70%;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    padding-top: 0.1rem;
+    display: flex;
+    align-items: center;
+    outline-color: #107c41;
+}
+.selected-cell{
+    width:120px;
+}
+
+.function-sign{
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formula-input{
+    width:calc(100vw - 160px);
+    
+}
+
+.data-container {
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.select-all {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+}
+
+.column-name-container {
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 1px solid lightgray;
+    display: flex;
+    overflow: hidden;
+}
+.column-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    border-right: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.row-name-container {
+    width: 30px;
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+.row-name{
+    min-height: 25px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-cell-container {
+    width: calc(100vw - 30px);
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+.cell-row
+{
+    display: flex;
+}
+.input-cell{
+    min-width: 100px;
+    min-height: 25px;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    outline-color: #107c41;
+    font-size: 14;
+    font-family: "Noto Sans";
+}
+
+.input-cell.selected
+{
+    border: 2px solid #107c41
+}
+.sheet-bar {
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.scroller {
+    width: 70px;
+}
+
+.icon-left-scroll,
+.icon-right-scroll {
+    font-size: 30px;
+    padding-bottom: 2px;
+}
+
+.icon-left-scroll:hover,
+.icon-right-scroll:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.icon-add {
+    color: #107c41;
+    width: 40px;
+}
+
+.icon-add:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container {
+    border: 1px solid lightgray;
+    width: calc(100vw - 110px);
+    display: flex;
+}
+
+.sheet-tab {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+    cursor: pointer;
+}
+.sheet-tab.selected{
+    border-bottom: 4px solid #107c41;
+    cursor: default;
+}
+.sheet-tab.selected:hover{
+    cursor: default;
+    background-color: #ffffff;
+}
+
+.sheet-tab:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.input-cell.top-cell-selected{
+    border-top: none;
+}
+.input-cell.bottom-cell-selected{
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.right-cell-selected{
+    border-right: 1px solid lightgray;
+}
+.input-cell.left-cell-selected{
+    border-left: none;
+}
+.sheet-option-modal{
+    position: absolute;
+    bottom: 4vh;
+    background-color: white;
+    height: 63px;
+    width: 70px;
+    left: 20vh;
+    border: 2px solid rgb(8, 92, 26);
+    box-shadow: 0 0 3px 1px lightgrey;
+}
+
+.sheet-rename,.sheet-delete{
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-rename:hover,.sheet-delete:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.sheet-rename-modal{
+    position: absolute; 
+    height: 180px;
+    width: 300px;
+    top: calc(100vh / 2 - 90px);
+    left: calc(100vw / 2 - 150px);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px 1px lightgrey;
+    border: 2px solid #107c41;
+}
+
+.action-buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.new-sheet-name{
+    height: 26px;
+    font-size: 18px;
+    outline-color: #107c41;
+}
+
+.submit-button{
+    cursor: pointer;
+    background-color: #107c41;
+    color: white;
+    padding: 6px;
+}
+.cancel-button{
+    cursor: pointer;
+    background-color: lightgray;
+    padding: 6px;
+}
